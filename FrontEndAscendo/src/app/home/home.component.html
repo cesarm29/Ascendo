@@ -1,0 +1,65 @@
+<div class="container-fluid display-table">
+  <div class="row display-table-row">
+    <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+      <div class="logo">
+        <a hef="home.html"><img src="../assets/img/user.png" alt="merkery_logo" class="hidden-xs hidden-sm">
+          <img src="../assets/img/user.png" alt="merkery_logo" class="visible-xs visible-sm circle-logo">
+        </a>
+      </div>
+      <div class="navi">
+        <ul>
+          <li class="active"><a href="home"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Inicio</span></a></li>
+          <li [hidden]="rol == 1"  ><a href="user"><i class="fa fa-money" aria-hidden="true"></i><span class="hidden-xs hidden-sm" >Retirar Dinero</span></a></li>
+          <li [hidden]="rol == 2" ><a  href="admin"><i class="fa fa-money" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Ingresar Dinero</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-10 col-sm-11 display-table-cell v-align">
+      <div class="row">
+        <header>
+          <div class="col-md-10">
+            <nav class="navbar-default pull-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#side-menu"
+                  aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                </button>
+              </div>
+            </nav>
+            <div class="search hidden-xs hidden-sm">
+              <input type="text" placeholder="Busqueda" id="search">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="header-rightside">
+              <ul class="list-inline header-top pull-right">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <div class="navbar-content">
+                        <span>Usuario</span>
+                        <p class="text-muted small">
+                          {{user}}
+                        </p>
+                        <div class="divider">
+                        </div>
+                        <a href="#" (click)="close()" class="view btn-sm active">Salir</a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <div id="main">
+          <h2>Bienvenido!!! <h4>{{user}}</h4></h2>  
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

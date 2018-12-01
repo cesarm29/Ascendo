@@ -1,0 +1,62 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="text-center text-white mb-4"> Login </h2>
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <!-- form card login -->
+          <div class="card rounded-0">
+            <div class="card-header">
+              <h3 class="mb-0">Login</h3>
+            </div>
+            <div class="card-body">
+
+            <div class="alert alert-danger alert-dismissable fuente-project" *ngIf="msg">
+                    <a class="close" (click)="closeAlert()">
+                       &times;
+                    </a>
+                  <h6>{{msg}}</h6>
+             </div>
+
+             
+            <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+                <div class="form-group">
+                  <label for="uname1">Usuario*</label>
+                  <input  class="form-control" type="email" formControlName="email" id="email"  [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Ingrese el Usuario">
+                  <span class="focus-input100">
+                      <div *ngIf="submitted && f.email.errors" >
+                           <div *ngIf="f.email.errors.required"> <label id="error">El usuario es requerido </label></div>
+                             </div>
+                  </span>
+                </div>
+                <div class="form-group">
+                  <label>Contraseña*</label>
+                  <input  class="form-control" type="password" formControlName="pass" id="pass"  [ngClass]="{ 'is-invalid': submitted && f.pass.errors }" placeholder="Ingrese la contraseña">
+                    <span class="focus-input100">
+                        <div *ngIf="submitted && f.pass.errors" >
+                            <div *ngIf="f.pass.errors.required"> <label id="error">La contraseña es requerida </label></div>
+                          </div>
+                    </span>
+                </div>
+                <div>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <a href="register">Crear Usuario</a>
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Ingreso</button>
+              </form>
+            </div>
+            <!--/card-block-->
+          </div>
+          <!-- /form card login -->
+        </div>
+      </div>
+      <!--/row-->
+    </div>
+    <!--/col-->
+  </div>
+  <!--/row-->
+</div>
+<!--/container-->

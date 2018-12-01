@@ -1,0 +1,18 @@
+
+/*
+ * Card
+ */
+.card {
+    background-color: #F7F7F7;
+}
+/*
+ * error
+ */
+#error{
+	color: #dc3545;
+	font-size: 12px;
+}
+
+.focus-input100 {
+   padding-top: 45px;
+}

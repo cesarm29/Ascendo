@@ -1,0 +1,41 @@
+/*
+ * Generic
+ */
+
+button {
+    margin-left: 10px;
+}
+
+a {
+    margin-left: 10px; 
+}
+
+select {
+    height: 80px;
+    padding: 0px 0px;
+}
+
+/*
+ * Card
+ */
+ .card {
+    background-color: #F7F7F7;
+}
+/*
+ * Register
+ */
+#register {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+/*
+ * error
+ */
+ #error{
+	color: #dc3545;
+	font-size: 12px;
+}
+
+.focus-input100 {
+   padding-top: 45px;
+}
